@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>京东部分</title>
+    <style>
+    /*顶部导航*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    /*共同修饰*/
+    body {
+      font: 12px Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b体,sans-serif;
+      background-color: #f6f6f6;
+    }
+    .w {
+      width: 1189px;
+      margin: auto;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .clearfix::after,
+    .clearfix::before {
+      content: "";
+      height: 0;
+      line-height: 0;
+      display: block;
+      visibility: hidden;
+      clear: both;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+
+    .nav {
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #ddd;
+      background-color: #e3e4e5;
+    }
+    .nav-01 {
+      height: 30px;
+      /*background-color: pink;*/
+    }
+    .nav-02 {
+      width: 702px;
+      height: 30px;
+      float:right;
+    }
+    .nav-02 li {
+      float:right;
+    }
+    .nav-02 li a {
+      color: #999;
+      margin-right: 8px;
+    }
+    .nav-02 li a:hover {
+      color: #f10215;
+    }
+    .nav-02 li span {
+      margin-right: 8px;
+    }
+    .nav-03 {
+      color: #f10215;
+    }
+    .nav-04 li a{
+      color: #999;
+      margin-left: 210px;
+    }
+    .nav li a:hover {
+      color: #f10215;
+    }
+
+    /*logo*/
+    .can {
+      height: 140px;
+    }
+    .logo {
+      width: 190px;
+      height: 170px;
+      overflow: hidden;
+      background: white url("./img/logo.png") no-repeat 0px 0px;
+      position: relative;
+      top:-30px;
+    }
+    /*搜索框*/
+    .can input {
+      left: 0;
+      padding: 4px;
+      width: 490px;
+      height: 25px;
+      border: 1px solid #f10215;
+      line-height: 25px;
+      font-size: 14px;
+      outline-style: none;
+      position: relative;
+      top:-145px;
+      left: 310px;
+    }
+    .can-01 {
+      background: url("./img/fdj.jpg") no-repeat 11px 6px;
+      width: 50px;
+      height: 35px;
+      line-height: 35px;
+      border: none;
+      background-color: #f10215;
+      position: relative;
+      top:-180px;
+      left: 810px;
+      /*background: url("./img/fdj.jpg") no-repeat 0px 0px;*/
+      /*font-size: 20px;
+      font-weight: 700;
+      color: #fff;*/
+    }
+    .can-02 {
+      width: 550px;
+      height: 20px;
+      overflow: hidden;
+      position: relative;
+      left: 310px;
+      top: -180px;
+      line-height: 20px;
+      /*background-color: pink;*/
+    }
+    .can-02 li {
+      float: left;
+    }
+    .can-02 li a {
+      color: #999;
+      margin-right: 10px;
+    }
+    .can-02 li a:hover {
+      color:#f10215;
+    }
+    /*购物车*/
+    .can-04 {
+    width: 188px;
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+    border: 1px solid #e3e4e5;
+    position: relative;
+    top: -234px;
+    left: 890px;
+    }
+    .can-05 {
+      color: #f10215;
+      background: url("./img/gwc.jpg") no-repeat 40px 3px;
+    }
+    .can-05 span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: #f10215;
+      color:white;
+      border-radius: 15px;
+      position: absolute;
+      top: 3px;
+      left: 126px;
+      line-height: 15px;
+    }
+    /*导航菜单*/
+    .can-06 {
+      overflow: hidden;
+      position: relative;;
+      left: 192px;
+      bottom: 184px;
+      width: 790px;
+      height: 20px;
+      /*background-color: pink;*/
+    }
+    .can-06 li {
+      float: left;
+    }
+    .can-06 li a {
+      font-size: 16px;
+      font-weight: bold;
+      color: #555555;
+      margin-left: 30px;
+      /*position: absolute;
+      top: 0px;*/
+    }
+    .can-06 li a:hover {
+      color: #f10215;
+    }
+    /*二维码*/
+    .can-07 {
+      height: 65px;
+      width: 65px;
+      /*line-height: 65px;*/
+      position: absolute;
+      top: 30px;
+      right: 240px;
+      background: url("./img/ewm.jpg") no-repeat;
+    }
+    /*第二层图片内容*/
+    .banner {
+      height: 490px;
+      /*background-color: pink;*/
+    }
+    /*left*/
+    .banner-01 {
+      width: 190px;
+      height: 480px;
+      background-color: #6e6568;
+    }
+    /*.banner-02 ul {
+    position: relative;
+    top: 50px;
+    }*/
+    .banner-02 li {
+      width: 190px;
+      height: 32px;
+      line-height: 32px;
+      /*margin-left: 20px;*/
+    }
+    .banner-02 li a {
+      font-size: 14px;
+      color: #ffffff;
+      margin-left: 20px;
+    }
+    .banner-02 li:hover {
+      background-color: #999395;
+    }
+    .banner-02 li a:hover {
+      color: #f10215;
+      /*background-color: #999395;*/
+    }
+    /*中间*/
+    .banner-03 {
+      width: 790px;
+      height: 480px;
+      position: absolute;
+      top: 171px;
+      left: 440px;
+    }
+    .banner-03-01 {
+      width: 790px;
+      height: 340px;
+      background: url("./img/banner.jpg") no-repeat;
+    }
+    .banner-03-02 {
+      width: 390px;
+      height: 130px;
+      background: url("./img/banner01.jpg") no-repeat ;
+      position: absolute;
+      bottom: 0px;
+    }
+    .banner-03-03 {
+      width: 390px;
+      height: 130px;
+      background: url("./img/banner02.jpg") no-repeat ;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+    }
+    /*right*/
+    .banner-04 {
+      width: 190px;
+      height: 480px;
+      position: absolute;;
+      top: 171px;
+      right: 240px;
+      background-color: white;
+
+    }
+    .y {
+      width: 174px;
+      margin: auto;
+    }
+    .banner-04-01 {
+      height: 115px;
+      border-bottom: 1px solid #e6e6e6;
+      background: url("./")
+      /*background-color: skyblue;*/
+    }
+    .banner-04-02 {
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      top: 10px;
+      left: 85px;
+    }
+    #banner-04-03 {
+      color: black;
+      font-weight: bold;
+    }
+    .banner-04-04 {
+      height: 60px;
+      width: 60px;
+      border-radius: 80px;
+      background: url("./img/logo01.jpg") no-repeat 0px 0px;
+      background-color: pink;
+    }
+    #banner-04-06 {
+      color:#f10215;
+      border: 2px solid #f10215;
+      padding: 2px 10px;
+      position: absolute;
+      top: 70px;
+      left: 10px;
+    }
+    #banner-04-07 {
+      color:#f10215;
+      border: 2px solid #f10215;
+      padding: 2px 10px;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+    }
+    /*right02*/
+    .banner-05 {
+      height: 150px;
+      width: 147px;
+      /*border-bottom: 1px solid #e6e6e6;*/
+    }
+    .banner-05-01 {
+      height: 25px;
+      border-bottom: 1px solid #e6e6e6;
+      position: relative;
+      line-height: 25px;
+      /*background-color: pink;*/
+    }
+    .banner-05-02 {
+      width: 40px;
+      height: 20px;
+      /*background-color: pink;*/
+      line-height: 20px;
+      margin-top:5px;
+      border-right: 1px solid #e6e6e6;
+      /*position: relative;
+      left:0px; */
+    }
+    .banner-05-03 {
+      width: 120px;
+      height: 20px;
+      line-height: 20px;
+      position: relative;
+      left:45px;
+      top: -20px;
+      /*background-color: pink;*/
+    }
+    .banner-05-01 a {
+      color: black;
+    }
+    #banner-05-04,#banner-05-06:hover {
+      text-decoration-line:underline;
+    }
+    #banner-05-05,#banner-05-07 :hover{
+      color: #f10215;
+    }
+
+    /*right03*/
+    .banner-06 {
+      width: 190px;
+      height: 210px;
+      /*background-color: skyblue;*/
+    }
+
+    .banner-06 li {
+      width: 47px;
+      height: 69px;
+      border-top: 1px solid #e6e6e6;
+      border-right: 1px solid #e6e6e6;
+      float: left;
+    }
+    .banner-06 li.ban {
+      width: 45px;
+      height: 48px;
+      border-right: 0px solid white;
+    }
+    .banner-06 li span {
+      width: 22px;
+      height: 24px;
+      display: inline-block;
+      position: relative;
+      top: 13px;
+      left: 11px;
+    }
+    .banner-06 li:nth-child(1) span {
+      background: url("./img/jingling02.png") -3px -88px;
+    }
+    .banner-06 li:nth-child(2) span {
+      background: url("./img/jingling02.png") 0px -44px;
+    }
+    .banner-06 li:nth-child(3) span {
+      background: url("./img/jingling02.png") 67px 104px;
+    }
+    .banner-06 li:nth-child(4) span {
+      background: url("./img/jingling02.png") 110px 59px;
+    }
+    .banner-06 li:nth-child(5) span {
+      background: url("./img/jingling02.png") 23px -88px;
+    }
+    .banner-06 li:nth-child(6) span {
+      background: url("./img/jingling02.png") 23px -45px;
+    }
+    .banner-06 li:nth-child(7) span {
+      background: url("./img/jingling02.png") 68px -86px;
+    }
+    .banner-06 li:nth-child(8) span {
+      background: url("./img/jingling02.png") 111px -41px;
+    }
+    .banner-06 li:nth-child(9) span {
+      background: url("./img/jingling02.png") -133px 0px;
+    }
+    .banner-06 li:nth-child(10) span {
+      background: url("./img/jingling02.png") 156px 148px;
+    }
+    .banner-06 li:nth-child(11) span {
+      background: url("./img/jingling02.png") 223px 296px;
+    }
+    .banner-06 li:nth-child(12) span {
+      background: url("./img/jingling02.png") -45px 2px;
+    }
+
+    .banner-06 li p {
+      position: relative;
+      top: 12px;
+      left: 8px;
+    }
+    .banner-06 li p:hover {
+      color: #f10215;
+    }
+
+    /*秒杀红条*/
+    .miao {
+      height: 65px;
+      background: url("./img/miaosha.png") no-repeat 0px 10px;
+
+    }
+    .miao-01 li {
+      float: left;
+    }
+    .miao-01 li h1 {
+      color: white;
+      position: relative;
+      top:22px;
+      left: 70px;
+    }
+    .miao-01 li h4 {
+      color: white;
+      position: relative;
+      top:36px;
+      left: 80px;
+    }
+    .miao-02 li {
+      float: right;
+    }
+    .miao-02 h3 {
+      color: white;
+    }
+    #miao01 {
+      position: relative;
+      right: 250px;
+      top: -7px;
+    }
+    #miao02 {
+      position: relative;
+      right: -20px;
+      top: -7px;
+    }
+    .miao03 {
+      width: 133px;
+      height: 42px;
+      position: relative;;
+      top: -18px;
+      right: -946px;
+      background: url("./img/zhong.png") no-repeat 0px 0px;
+      /*background-color: pink;*/
+    }
+    .miao04 {
+      height: 55px;
+      width: 65px;
+      position: relative;
+      top: -68px;
+      /*float: left;*/
+      background:url("./img/jingling01.png") no-repeat 22px -25px;
+      /*background-color: pink;*/
+    }
+    /*内容第一列*/
+    .cen {
+      height: 260px;
+      /*background-color: pink;*/
+    }
+    .cen ul li {
+      float: left;
+      width: 169px;
+      height: 225px;
+      background-color: white;
+      border-right: 1px solid #e7e7e7;
+      padding: 3px 14px;
+    }
+    .cen ul li span {
+      display: inline-block;
+      width: 130px;
+      height: 130px;
+      background: url("./img/cen01.jpg");
+      margin: 20px 0px 0px 20px;
+    }
+    .cen ul li p {
+      width: 142px;
+      height: 32px;
+      font-size: 12px;
+      margin-left: 15px;
+      text-align: left;
+      /*padding: 0px 4px;*/
+    }
+    .cen-01 {
+      margin-left: 15px;
+      color: #f10215;
+    }
+    .cen ul li div {
+      margin-top: 10px;
+    }
+    .cen-03 {
+      width: 168px;
+      padding-right: 2px;
+      background: url("./img/cen06.jpg") no-repeat 9px 0px;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- 顶部导航 -->
+    <div class="nav clearfix">
+      <div class="nav-01 w">
+        <ul class="nav-02">
+          <li><a href=""><span>|</span>手机京东</a></li>
+          <li><a href=""><span>|</span>网站导航</a></li>
+          <li><a href=""><span>|</span>客户服务</a></li>
+          <li><a href=""><span>|</span>企业采购</a></li>
+          <li><a href=""><span>|</span>京东会员</a></li>
+          <li><a href=""><span>|</span>我的京东</a></li>
+          <li><a href=""><span>|</span>我的订单</a></li>
+          <li><a href="">你好，请登录 <span class="nav-03">免费注册</span></a></li>
+        </ul>
+        <ul class="nav-04">
+          <li><a href="">北京</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- logo -->
+    <div class="can w">
+      <div class="logo"></div>
+      <!-- 搜索框 -->
+      <input type="text">
+      <div class="can-01"></div>
+      <div class="can-02">
+        <ul class="can-03">
+          <li><a href="">300减150</a></li>
+          <li><a href="">玩物尚志</a></li>
+          <li><a href="">农耕节</a></li>
+          <li><a href="">199减188</a></li>
+          <li><a href="">一件9折</a></li>
+          <li><a href="">酒柜</a></li>
+          <li><a href="">毛呢大衣女</a></li>
+          <li><a href="">牛奶乳品</a></li>
+          <li><a href="">移动硬盘it</a></li>
+      </ul>
+    </div>
+    <!-- 购物车 -->
+    <div class="can-04">
+    <p class="can-05">我的购物车<span>0</span></p>
+    </div>
+    <!-- 导航菜单 -->
+    <div class="can-06 clearfix">
+      <ul class="can-06-01">
+        <li><a href="">秒杀</a></li>
+        <li><a href="">优惠券</a></li>
+        <li><a href="">闪购</a></li>
+        <li><a href="">拍卖</a></li>
+        <li><a href="">服装城</a></li>
+        <li><a href="">京东超市</a></li>
+        <li><a href="">生鲜</a></li>
+        <li><a href="">全球购</a></li>
+        <li><a href="">京东金融</a></li>
+      </ul>
+    </div>
+    <!-- 二维码 -->
+    <div class="can-07"></div>
+    </div>
+    <!-- 第二层图片内容 -->
+    <div class="banner w">
+      <!-- left -->
+      <div class="banner-01">
+        <ul class="banner-02">
+          <li><a href="">家用电器</a></li>
+          <li><a href="">手机/运营商/数码</a></li>
+          <li><a href="">电脑办公</a></li>
+          <li><a href="">家居/家具/家装/厨具</a></li>
+          <li><a href="">男装/女装/童装/内衣</a></li>
+          <li><a href="">个护化妆/境界用品/宠物</a></li>
+          <li><a href="">鞋靴/箱包/珠宝/奢侈品</a></li>
+          <li><a href="">运动/户外/钟表</a></li>
+          <li><a href="">汽车/汽车用品</a></li>
+          <li><a href="">母婴/玩具乐器</a></li>
+          <li><a href="">食品/酒类/生鲜/特产</a></li>
+          <li><a href="">医药保健</a></li>
+          <li><a href="">图书/音箱/电子书</a></li>
+          <li><a href="">机票/酒店/旅游/生活</a></li>
+          <li><a href="">理财/众筹/白条/保险</a></li>
+        </ul>
+      </div>
+      <!-- 中间 -->
+      <div class="banner-03">
+        <div class="banner-03-01"></div>
+        <div class="banner-03-02"></div>
+        <div class="banner-03-03"></div>
+      </div>
+      <!-- right01 -->
+      <div class="banner-04">
+        <div class="banner-04-01 y">
+          <ul class="banner-04-02">
+            <li>Hi,欢迎来到京东</li>
+            <li><a id="banner-04-03" href="">登录  注册</a></li>
+          </ul>
+          <div class="banner-04-04"></div>
+          <ul class="banner-04-05">
+            <li><a id="banner-04-06"href="">新人福利</a></li>
+            <li><a id="banner-04-07"href="">PLUS会员</a></li>
+          </ul>
+        </div>
+        <!-- right02 -->
+        <div class="banner-05 y">
+           <div class="banner-05-01">
+             <div class="banner-05-02">
+               <a id="banner-05-06"href="">促销</a></div>
+             <div class="banner-05-03">
+              <a id="banner-05-04" href="">公告</a><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+              <a id="banner-05-05"href="">更多</a></div>
+             <ul id="banner-05-07">
+               <li><a href="">手机亿元红包大放送</a></li>
+               <li><a href="">节后消脂，9.9享瘦新鲜</a></li>
+               <li><a href="">大牌平板每满千减百</a></li>
+               <li><a href="">每日享折扣 京东品质游</a></li>
+             </ul></div>
+       </div>
+       <!-- right03 -->
+       <div class="banner-06 y">
+         <ul>
+           <li><span></span><p>话费</p></li>
+           <li><span></span><p>机票</p></li>
+           <li><span></span><p>酒店</p></li>
+           <li class="ban"><span></span><p>酒店</p></li>
+           <li><span></span><p>游戏</p></li>
+           <li><span></span><p>企业购</p></li>
+           <li><span></span><p>加油卡</p></li>
+           <li class="ban"><span></span><p>电影票</p></li>
+           <li><span></span><p>火车票</p></li>
+           <li><span></span><p>众筹</p></li>
+           <li><span></span><p>理财</p></li>
+           <li class="ban"><span></span><p>白条</p></li>
+         </ul>
+       </div>
+    </div>
+
+    <!-- 秒杀红条 -->
+    <div class="miao w">
+      <ul class="miao-01 clearfix">
+        <li><h1>京东秒杀</h1></li>
+        <li><h4>总有呢想不到的低价<h4></li>
+      </ul>
+      <ul class="miao-02">
+        <li><h3 id="miao01">当前场次</h3></li>
+        <li><h3 id="miao02">后结束抢购</h3></li>
+      </ul>
+      <div class="miao03"></div>
+      <div class="miao04"></div>
+    </div>
+   <!-- 内容第一列 -->
+   <div class="cen w">
+     <ul>
+       <li>
+         <span></span>
+         <p>京东超市光明莫斯利安巴氏杀菌常温盒钻石装</p>
+         <div><i class=cen-01>￥<b>1988.00</b></i><i>￥</i><del>1888.00</del></div>
+       </li>
+       <li>
+         <span></span>
+         <p>京东超市光明莫斯利安巴氏杀菌常温盒钻石装</p>
+         <div><i class=cen-01>￥<b>1988.00</b></i><i>￥</i><del>1888.00</del></div>
+       </li>
+       <li>
+         <span></span>
+         <p>京东超市光明莫斯利安巴氏杀菌常温盒钻石装</p>
+         <div><i class=cen-01>￥<b>1988.00</b></i><i>￥</i><del>1888.00</del></div>
+       </li>
+       <li>
+         <span></span>
+         <p>京东超市光明莫斯利安巴氏杀菌常温盒钻石装</p>
+         <div><i class=cen-01>￥<b>1988.00</b></i><i>￥</i><del>1888.00</del></div>
+       </li>
+       <li>
+         <span></span>
+         <p>京东超市光明莫斯利安巴氏杀菌常温盒钻石装</p>
+         <div><i class=cen-01>￥<b>1988.00</b></i><i>￥</i><del>1888.00</del></div>
+       </li>
+       <li class="cen-03">
+         <!-- <img src="./img/cen06.jpg" alt=""> -->
+       </li>
+
+
+
+
+     </ul>
+   </div>
+  </body>
+</html>
